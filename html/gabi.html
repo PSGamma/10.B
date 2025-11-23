@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adatok</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+
+        color: whitesmoke;
+
+        font-weight: bold;
+
+        text-shadow: 0 0 10px red, 0 0 20px green;
+    }
+</style>
+<body style="
+    background-image: url('karacsony1.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+  ">
+    <a href="index.html">
+        <img src="vissza.png" width="50">
+    </a>
+
+    <h1 style="text-align:center; padding:20px 0; color: aliceblue;">Előélet</h1>
+
+    <table width="80%" align="center" cellpadding="20" style="background:white; color:black;
+            background-image: url('presents.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            border-radius: 10px;
+          ">
+        <tr>
+            <td width="40%">
+
+                <img id="nagyKep" src="gabi.jpg" style="width:100%; height:800px; object-fit:cover;">
+
+                <br><br>
+
+
+                <img src="gabi.jpg" width="100" height="100" style="object-fit:cover;" onclick="csere('gabi.jpg')">
+                <img src="gabi1.jpg" width="100" height="100" style="object-fit:cover;" onclick="csere('gabi1.jpg')">
+                <img src="gabi2.jpg" width="100" height="100" style="object-fit:cover;" onclick="csere('gabi2.jpg')">
+                <img src="gabi3.jpg" width="100" height="100" style="object-fit:cover;" onclick="csere('gabi3.jpg')">
+
+                <script>
+                    function csere(kep) {
+                        document.getElementById("nagyKep").src = kep;
+                    }
+                </script>
+
+            </td>
+
+            <td>
+                <h2>Személyes adatok</h2>
+                <b>Név:</b> Matejcsik Gabi<br><br>
+                <b>Nem:</b> Férfi?<br><br>
+                <b>Születési hely:</b> Taktaharkány<br><br>
+                <b>Születési idő:</b> annó 90-ben<br><br>
+                <b>Állampolgárság:</b> satacon<br><br>
+                <b>Kedvenc zenéje:
+                    <br><br>
+                    <audio controls autoplay loop>
+                        <source src="gabi.mp3" type="audio/mp3">
+                    </audio>
+                </b>
+            </td>
+        </tr>
+    </table>
+
+    <table width="80%" align="center" cellpadding="20" style="background:white; color:black; margin-top:20px;">
+        <tr>
+            <td>
+                <h3>Története:</h3>
+                <h4 style="color: red;">Matejcsik Gabi – vagy ahogy a környéken tisztelettel suttogják: „A Taktaharkányi Rejtély, Aki Anno ’90-ben Született, De
+                Már Akkor Is Készen Állt” – egy egészen különös figura, akinek már a megjelenése is azt sugallja: ő tud valamit, amit
+                mások nem.
+                
+                Születési hely: Taktaharkány
+                
+                A legenda szerint Gabi születése napján a falu összes utcai lámpája egyszerre kezdett vibrálni. Nem azért, mert
+                elektromos hiba volt – hanem mert érezte a rendszer, hogy új karakter érkezett a világba.
+                A bába állítólag így szólt:
+                „Ez a gyerek nagy dolgokra lesz hivatott… vagy legalábbis sokat fog mosolyogni gyanúsan.”
+                
+                Anno ’90-ben – de milyen ’90-ben?
+                
+                A dokumentum ezt a misztikus megfogalmazást használja:
+                "anno 90-ben"
+                Ez többféle történelmi értelmezést is enged:
+                
+                lehet 1990,
+                
+                lehet 1890,
+                
+                vagy akár 90 után, amikor a rómaiak már kezdtek unni mindent.
+                
+                A helyiek szerint Gabi kortalan, és valójában időn kívül létezik, mint egy kedvenc kabát, amit évek óta hordasz, és még
+                mindig jó.
+                
+                Satacon állampolgár
+                
+                Ez egy különösen titokzatos hely.
+                Azt mondják, Satacon egy párhuzamos dimenzió, ahol mindenki kabátban jár, és senki sem kérdezi meg, miért. Gabi itt
+                kapta az állampolgárságát, miután egyszer fél perc alatt behajtogatta a buszmenetrendet origamiba.
+                
+                A gyanús mosoly mestere
+                
+                A képen látható karakter mosolya olyan, mintha:
+                
+                épp most talált volna ki valami csínyt,
+                
+                vagy tudna egy titkot, amit senki más,
+                
+                vagy már harmadszor kérdezték meg tőle, „ugye nem csináltál semmit?”,
+                és ő nemmel felelt… de közben nagyon is csinált valamit.
+                
+                A mellékszereplő képek tanulsága
+                
+                A további fotók alapján Gabi legalább három formában képes létezni:
+                
+                A kabátos, rejtélyes főhős
+                
+                A pólós, váratlanul jókedvű figura
+                
+                A „nézem a kasszát, de tudom, hogy valami nincs rendben” üzemmód
+                
+                A „telefonálok, de közben figyellek” alteregó
+                
+                Ez a sokoldalúság teszi őt a Satacon multiverzum egyik legfélelmetesebb karakterévé.</h4>
+            </td>
+        </tr>
+    </table>
+
+    <table width="80%" align="center" cellpadding="20" style="background:white; color:black; margin-top:20px;">
+        <tr>
+            <td>
+                <h3>Kapcsolódó körözések</h3>
+                <a href="#" style="color:red;">Mosolyával annyi gyanút keltett, hogy a tükrök is visszakérdeznek neki. – Btk. 10.§</a><br><br>
+                <a href="#" style="color:red;">Minden fotón úgy néz ki, mintha már előre tudná, mit csináltál tegnap. – Btk. 666.§</a>
+            </td>
+        </tr>
+    </table>
+    
+    </body>
+    
+    </html>

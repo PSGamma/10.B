@@ -1,92 +1,333 @@
 <!DOCTYPE html>
+
 <html lang="hu">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>10.B/B</title>
 
-  <style>
-    h1 {
-      text-align: center;
-      color: whitesmoke;
-      font-weight: bold;
+<style>
+  h1 {
+
+    text-align: center;
+
+    color: whitesmoke;
+
+    font-weight: bold;
+
+    text-shadow: 0 0 10px red, 0 0 20px green;
+
+  }
+
+
+  h2 {
+
+    text-align: center;
+
+    color: whitesmoke;
+
+    font-weight: bold;
+
+    text-shadow: 0 0 10px red, 0 0 20px green;
+
+  }
+
+
+  .image-wrapper {
+
+    position: relative;
+
+    display: inline-block;
+
+  }
+
+
+  .image-wrapper img {
+
+    display: block;
+
+  }
+
+
+  @keyframes hat-wiggle {
+
+    0%,
+    100% {
+      transform: rotate(-15deg);
     }
 
-    h2 {
-      text-align: center;
-      color: red;
+    50% {
+      transform: rotate(-5deg);
     }
-  </style>
+
+  }
+
+
+  .santa-hat {
+
+    position: absolute;
+
+    width: 120px;
+
+    top: -48px;
+
+    left: -45px;
+
+    transform: rotate(-15deg);
+
+    pointer-events: none;
+
+    animation: hat-wiggle 2s infinite ease-in-out;
+
+  }
+  
+</style>
+<style>
+td[align="center"] {
+  position: relative;
+}
+
+td[align="center"] .image-wrapper {
+  border: 2px solid rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.35);
+  border-radius: 8px;
+}
+
+  td[align="center"]:hover .image-wrapper {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+  }
+</style>
 
 </head>
 
 <body style="
-    background-image: url('Backgorund.gif');
+    background-image: url('karacsony1.gif');
     background-size: cover;
     background-repeat: no-repeat;
   ">
 
+  <h3 style="color:white;">Lobby zene:</h3>
+  
+  <button id="zenegomb" style="
+    padding:10px 20px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    background-color:white;
+    border:2px solid black;
+  ">
+    ► Játszd le
+  </button>
+  
+  <audio id="zene" loop>
+    <source src="zenekaracsony.mp3" type="audio/mp3">
+  </audio>
+  
+  <script>
+    const zene = document.getElementById("zene");
+    const gomb = document.getElementById("zenegomb");
+
+    let szol = false;
+
+    gomb.onclick = function () {
+      if (!szol) {
+        zene.play();
+        gomb.textContent = "⏸ Állj";
+        szol = true;
+      } else {
+        zene.pause();
+        gomb.textContent = "► Játszd le";
+        szol = false;
+      }
+    };
+  </script>
+
   <h1>10.B/B</h1>
   <h2>Kattinson rá bármelyik előlényre, amelynek szeretné tudni a történetét</h2>
+  <h2>Christmas Edition</h2>
 
   <table align="center" cellspacing="40">
 
-    <!-- 1. SOR -->
     <tr>
       <td align="center">
-        <a href="furesz.html"><img src="furesz.jpg" width="250" height="350"></a><br><b style="color: white;">Fűrész</b>
+        <a href="furesz.html">
+          <div class="image-wrapper">
+            <img src="furesz.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Fűrész</b>
       </td>
 
       <td align="center">
-        <a href="beni.html"><img src="beni.jpg" width="250" height="350"></a><br><b style="color: white;">Beni</b>
+        <a href="beni.html">
+          <div class="image-wrapper">
+            <img src="beni.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Beni</b>
       </td>
 
       <td align="center">
-        <a href="kokai.html"><img src="kokai.jpg" width="250" height="350"></a><br><b style="color: white;">Kókai</b>
+        <a href="kokai.html">
+          <div class="image-wrapper">
+            <img src="kokai.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Kókai</b>
       </td>
 
       <td align="center">
-        <a href="david.html"><img src="david.png" width="250" height="350"></a><br><b style="color: white;">Dávid</b>
+        <a href="david.html">
+          <div class="image-wrapper">
+            <img src="david.png" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Dávid</b>
       </td>
     </tr>
 
-    <!-- 2. SOR -->
     <tr>
       <td align="center">
-        <a href="bence.html"><img src="bence.jpg" width="250" height="350"></a><br><b style="color: white;">Bence</b>
+        <a href="bence.html">
+          <div class="image-wrapper">
+            <img src="bence.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Bence</b>
       </td>
 
       <td align="center">
-        <a href="gabi.html"><img src="gabi.jpg" width="250" height="350"></a><br><b style="color: white;">Gabi</b>
+        <a href="gabi.html">
+          <div class="image-wrapper">
+            <img src="gabi.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Gabi</b>
       </td>
 
       <td align="center">
-        <a href="aron.html"><img src="aron.jpg" width="250" height="350"></a><br><b style="color: white;">Áron</b>
+        <a href="aron.html">
+          <div class="image-wrapper">
+            <img src="aron.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Áron</b>
       </td>
 
       <td align="center">
-        <a href="marci.html"><img src="marci.jpg" width="250" height="350"></a><br><b style="color: white;">Marci</b>
+        <a href="marci.html">
+          <div class="image-wrapper">
+            <img src="marci.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Marci</b>
       </td>
     </tr>
 
-    <!-- 3. SOR -->
     <tr>
       <td align="center">
-        <a href="lori.html"><img src="lori.jpg" width="250" height="350"></a><br><b style="color: white;">Lori</b>
+        <a href="lori.html">
+          <div class="image-wrapper">
+            <img src="lori.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Lori</b>
       </td>
 
       <td align="center">
-        <a href="dominik.html"><img src="dominik.jpg" width="250" height="350"></a><br><b style="color: white;">Dominik</b>
+        <a href="dominik.html">
+          <div class="image-wrapper">
+            <img src="dominik.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Dominik</b>
       </td>
 
       <td align="center">
-        <a href="hatar.html"><img src="határ.jpg" width="250" height="350"></a><br><b style="color: white;">Határ</b>
+        <a href="hatar.html">
+          <div class="image-wrapper">
+            <img src="határ.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Határ</b>
       </td>
+
       <td align="center">
-        <a href="szeberenyi.html"><img src="szeberenyi.jpg" width="250" height="350"></a><br><b style="color: white;">Szeberényi</b>
+        <a href="szeberenyi.html">
+          <div class="image-wrapper">
+            <img src="szeberenyi.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Szeberényi</b>
       </td>
     </tr>
+    <tr>
+      <td align="center">
+        <a href="taki.html">
+          <div class="image-wrapper">
+            <img src="taki.jpg" width="250" height="350">
+            <img src="mikulassapka.png" class="santa-hat">
+          </div>
+        </a><br>
+        <b style="color: white;">Taki</b>
+      </td>
+    </tr>
+
+    <img src="mikulasszan.png" class="santa-sleigh" />
+    
+    <style>
+      .santa-sleigh {
+        position: absolute;
+        top: 20%;
+        left: -500px;
+        width: 250px;
+        z-index: -1;
+        pointer-events: none;
+        animation: sleigh-move 30s linear infinite;
+      }
+    
+      @keyframes sleigh-move {
+        0% {
+          left: -500px;
+          top: 20%;
+        }
+    
+        20% {
+          top: 15%;
+        }
+    
+        40% {
+          top: 22%;
+        }
+    
+        60% {
+          top: 17%;
+        }
+    
+        80% {
+          top: 20%;
+        }
+    
+        100% {
+          left: 110%;
+          top: 20%;
+        }
+      }
+    </style>
 
   </table>
 
